@@ -31,7 +31,7 @@ var range;
 function drawHeat() {
     //plateCanvas.height = rows;
     //plateCanvas.width = columns;
-
+	
     if (n == 0)
         for (var i = 0; i < rows; i++) {
             temperature[i] = new Array();
@@ -79,11 +79,11 @@ function drawHeat() {
             temperature[i][j] = (temperature[i1][j] + temperature[i2][j] +
                 temperature[i][j1] + temperature[i][j2]) * tao + (1 - 4 * tao) * temperature[i][j];
 
-            index = Math.floor((temperature[i][j] - loTemp) / range * 1000);
+            index = Math.floor((temperature[i][j] - loTemp) / range * 100);
 
             if (true) {
                 if (index % 2 == 0)
-                    plateContext.fillStyle = color[0];
+                    plateContext.fillStyle = "magenta";
                 else
                     plateContext.fillStyle = color[1];
 
