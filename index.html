@@ -14,7 +14,7 @@
 		<img src="img/ec_03.png">
 		<p>In this case <i>&Delta;x, &Delta;y, &alpha; = 1</i>. According to Yunus A. &Ccedil;engel in his book <i>Heat and Mass Transfer</i> for the method to be stable then <i>&Delta;t < .25</i>. Solving for the node temperature and associating the temperatures to a two dimensional array the equations takes the form of the following code:</p>
 		<code>T[i][j] = (T[i + 1][j] + T[i - 1][j] + T[i][j + 1] + T[i][j - 1]) * dt + (1 - 4 * dt) * T[i][j]</code>
-		<p>Every element of the array is initially given a random temperature, setting the initial conditions. After this the equation above is iterated in steps and for each element of the array. A pixel is drawn with a color corresponding to an element's position and temperature. If an element is at the edge of the square then there are two things the program can do: treat the square as insulated meaning that the edge is a "mirror" or treat the square as a torus. I chose torus because this way I could tile the square for a nice background.</p>
+		<p>Every element of the array is initially given a random temperature, setting the initial conditions. After this the equation above is iterated in steps and for each element of the array. A pixel is drawn with a color corresponding to an element's position and temperature. If an element is at the edge of the square then there are two things the program can do: treat the square as insulated meaning that the edge is a "mirror" or treat the square as a torus. This app uses torus.</p>
 <script>
 var requestAnimationFrame = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
