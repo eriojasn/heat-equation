@@ -37,7 +37,7 @@ plateCanvas.addEventListener("mousedown", doMouseDown, false);
 
 var plateContext = plateCanvas.getContext("2d");
 var color = ["#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#FF66CC", "#ffffff"];
-var color1 = ["#6599FF", "#00ff00", "#6599FF", "#00ff00", "#6599FF", "#00ff00", "#6599FF", "#00ff00", "#6599FF", "#00ff00"];
+var color1 = ["#146eb4", "#ff9900", "#6599FF", "#00ff00", "#6599FF", "#00ff00", "#6599FF", "#00ff00", "#6599FF", "#00ff00"];
 var index;
 
 var temperature = new Array();
@@ -102,9 +102,9 @@ function drawHeat() {
 
             if (true) {
                 if (index % 2 == 0)
-                    plateContext.fillStyle = "magenta";
-                else
                     plateContext.fillStyle = color[1];
+                else
+                    plateContext.fillStyle = color[0];
 
                 plateContext.fillRect(i * 4, j * 4, 4, 4);
             }
